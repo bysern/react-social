@@ -1,13 +1,15 @@
 import "./topbar.css"
 import { Search, Person, Chat, Notifications } from '@mui/icons-material';
-
+import { Link } from "react-router-dom";
 
 export default function Topbar() {
     return (
         <div className="topbarContainer">
             <div className="topbarLeft">
-                <span className="logo">SocialApp</span>
-
+                <Link to="/" style={{ textDecoration: "none" }}>
+                    <span className="logo">SocialApp
+                    </span>
+                </Link>
             </div>
             <div className="topbarCenter">
                 <div className="searchBar">
@@ -39,6 +41,6 @@ export default function Topbar() {
                 <img src="/assets/person/1.jpeg" alt="" className="topbarProfilePicture" />
             </div>
 
-        </div>
+        </div >
     )
 }
